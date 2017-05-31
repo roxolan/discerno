@@ -7,12 +7,15 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/tools.logging "0.3.1"]
                  [environ "1.1.0"]
+                 [honeysql "0.9.0-beta2"]
                  [log4j/log4j "1.2.17" 
                   :exclusions [javax.mail/mail
                                javax.jms/jms
                                com.sun.jdmk/jmxtools
                                com.sun.jmx/jmxri]]
-                 [marginalia "0.9.0"]]
+                 [marginalia "0.9.0"]
+                 [toucan "1.0.3"
+                  :exclusions [honeysql]]]
 
   :plugins [[lein-expectations "0.0.8"]]
 
