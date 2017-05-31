@@ -1,7 +1,5 @@
 (ns discerno.core-test
-  (:require [clojure.test :refer :all]
-            [discerno.core :refer :all]))
+  (:use expectations))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+;; Math check
+(expect 2 (+ 1 1))

@@ -7,6 +7,9 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [environ "1.1.0"]
                  [marginalia "0.9.0"]]
+
+  :plugins [[lein-expectations "0.0.8"]]
+
   :main ^:skip-aot discerno.core
   :target-path "target/%s"
   :profiles {:dev {:dependencies [[expectations "2.2.0-beta1"]]}
