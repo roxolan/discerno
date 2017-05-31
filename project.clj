@@ -5,12 +5,19 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.8.0"]
+                 [org.clojure/tools.logging "0.3.1"]
                  [environ "1.1.0"]
+                 [log4j/log4j "1.2.17" 
+                  :exclusions [javax.mail/mail
+                               javax.jms/jms
+                               com.sun.jdmk/jmxtools
+                               com.sun.jmx/jmxri]]
                  [marginalia "0.9.0"]]
 
   :plugins [[lein-expectations "0.0.8"]]
 
   :main ^:skip-aot discerno.core
   :target-path "target/%s"
-  :profiles {:dev {:dependencies [[expectations "2.2.0-beta1"]]}
+  :profiles {:dev {:dependencies [[expectations "2.2.0-beta1"]]
+                   :jvm-opts ["-Dlogfile.path=target/log"]}
              :uberjar {:aot :all}})
