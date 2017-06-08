@@ -5,6 +5,9 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.8.0"]
+                 [org.clojure/core.async "0.3.443"]
+                 [org.clojure/core.match "0.3.0-alpha4"]
+                 [org.clojure/core.memoize "0.5.9"]
                  [org.clojure/tools.logging "0.3.1"]
                  [environ "1.1.0"]
                  [honeysql "0.9.0-beta2"]
